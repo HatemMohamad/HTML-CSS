@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HatemMohamad Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Fixed Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1e1e2f;
+      color: #fff;
+      padding: 15px;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d1ff;
+    }
+
+    /* Section spacing */
+    section {
+      padding: 80px 20px;
+    }
+
+    /* Centered Image with filter and rounded edges */
+    .profile-img {
+      display: block;
+      margin: 30px auto;
+      width: 200px;
+      border-radius: 50%;
+      filter: grayscale(30%) contrast(110%);
+    }
+
+    /* Table Styling */
+    table {
+      margin: 20px auto;
+      width: 80%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 2px solid #555;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    /* Text over Image */
+    .image-text-container {
+      position: relative;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .image-text-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    .image-text-container h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    /* Two Column Layout */
+    .columns {
+      display: flex;
+      gap: 20px;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+
+    .column {
+      flex: 1;
+      height: 200px;
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Hover Paragraph */
+    .hover-text {
+      text-align: center;
+      margin: 40px 20px;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .hover-text:hover {
+      color: #e91e63;
+    }
+
+    /* Image Overlay Fade */
+    .overlay-container {
+      position: relative;
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    .overlay-container img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .overlay-container .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      border-radius: 10px;
+    }
+
+    .overlay-container:hover .overlay {
+      opacity: 1;
+    }
+
+    /* Video Background with Text Overlay */
+    .video-section {
+      position: relative;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .video-section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .video-text {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding-top: 150px;
+      font-size: 2rem;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e2f;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .columns {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#work">work</a>
+  </nav>
+
+  <!-- Profile Image -->
+  <section>
+    <h1 style="text-align:center; margin-top:40px;">HatemMohamad's Portfolio</h1>
+    <img class="profile-img" src="https://cdn.pixabay.com/photo/2020/03/11/13/50/indian-4922226_1280.jpg" alt="HatemMohamad">
+  </section>
+
+  <!-- Table -->
+  <section id="about">
+    <h2 style="text-align:center;">Skills Table</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>Bootstrap</td>
+        <td>Intermediate</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Text Over Image -->
+  <section class="image-text-container">
+    <img src="https://images.unsplash.com/photo-1503264116251-35a269479413" alt="Creative">
+    <h2>Designing the Future</h2>
+  </section>
+
+  <!-- Two Columns -->
+  <section class="columns">
+    <div class="column">
+      <h3>About Me</h3>
+      <p>I am HatemMohamad, a student developer passionate about Coding.</p>
+    </div>
+    <div class="column">
+      <h3>Goals</h3>
+      <p>Learn modern web development tools, build impressive projects, and pursue a tech career in Web development.</p>
+    </div>
+  </section>
+
+  <!-- Hover Text -->
+  <p id="work" class="hover-text">A paragraph color effect!</p>
+
+  <!-- Image Overlay -->
+  <section class="overlay-container">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Overlay">
+    <div class="overlay">Web Dev Enthusiast</div>
+  </section>
+
+  <!-- Video Background Section -->
+  <section class="video-section">
+    <video autoplay muted loop>
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="video-text">Creating with Passion</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 HatemMohamad | Designed with ❤️ and HTML & CSS
+  </footer>
+
+</body>
+</html>
